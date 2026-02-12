@@ -1,7 +1,7 @@
 package TestPirates;
 
 public enum Couleur {
-	BLEU("Couleur bleu"), ROUGE("Couleur rouge");
+	BLEU("Bill Jambe de Bois"), ROUGE("Jack Le Borne ");
 
 	private String chaine;
 
@@ -12,4 +12,5 @@ public enum Couleur {
 	public String getCouleur() {
 		return chaine;
 	}
+	
 }

@@ -7,6 +7,7 @@ public class Pion {
 
 	public Pion(Couleur couleur) {
 		this.couleur = couleur;
+		nom = couleur.getCouleur();
 		this.position = 1;
 	}
 
