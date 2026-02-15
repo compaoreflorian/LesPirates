@@ -3,7 +3,8 @@ package TestPirates;
 import java.security.SecureRandom;
 import java.util.Random;
 
-public class Joueur extends JournalOnePiece {
+public class Joueur {
+	private IAffichage journal = new JournalOnePiece();
 	private String nom;
 	private int nombreDeCoeur;
 	private Pion pion ;
@@ -22,9 +23,9 @@ public class Joueur extends JournalOnePiece {
 	
 	
   public void deplacerJoueur() {
-	  int deplacement = random.nextInt(2,13);
+	  int deplacement = random.nextInt(2,12);
 	  plateau.occuperPosition(pion , deplacement);
-	  afficherposition( nom , pion.getPosition());
+	  journal.afficherposition( nom , pion.getPosition());
 }
   
  public String getNom() {
@@ -32,6 +33,6 @@ public class Joueur extends JournalOnePiece {
  }
 
  public void verifierVictoire() {
-	 afficherVictoire(pion.getPosition());
+	 journal.afficherVictoire(pion.getPosition());
  }
 }

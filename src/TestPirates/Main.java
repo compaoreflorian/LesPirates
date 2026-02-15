@@ -5,5 +5,6 @@ public class Main {
 		IAffichage journal = new JournalOnePiece();
 		Jeu jeu = new Jeu(journal);
 		jeu.initailiserLeJeu();
+		jeu.LancerJeu();
 	}
 }
