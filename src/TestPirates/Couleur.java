@@ -12,5 +12,5 @@ public enum Couleur {
 	public String getCouleur() {
 		return chaine;
 	}
-	
+
 }

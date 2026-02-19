@@ -19,10 +19,19 @@ public class Jeu {
 		journal.afficherJoueur(joueur2);
 		boolean test2 = true;
 		while (test2 == true) {
+
 			joueur1.deplacerJoueur();
-			joueur1.verifierVictoire();
+			boolean victoire1 = joueur1.verifierVictoire();
+			if (victoire1 == true) {
+				return;
+			}
+
 			joueur2.deplacerJoueur();
-			joueur2.verifierVictoire();
+			boolean victoire2 = joueur2.verifierVictoire();
+			if (victoire2 == true) {
+				return;
+			}
+
 			boolean avis = journal.afficheravis();
 			if (avis == true) {
 				test2 = true;

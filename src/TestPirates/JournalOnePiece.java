@@ -11,13 +11,16 @@ public class JournalOnePiece implements IAffichage {
 	}
 
 	@Override
-	public void afficherVictoire(int position) {
+	public boolean afficherVictoire(int position) {
+		boolean victoire =false;
 		if (position == 30) {
 			System.out.println("ça c'est du moussaillon tu a gagné ");
+			victoire =true;
 		} else {
 			System.out.println("tu y es presque continue comme ça moussaillon ");
 		}
 		System.out.println("--------------------------------------------------------------");
+		return victoire;
 
 	}
 

@@ -15,7 +15,7 @@ public class Plateau {
 
 	}
 
-	public void occuperPosition(Pion pion , int deplacement) {
+	public void occuperPosition(Pion pion, int deplacement) {
 		quitterPosition(pion);
 		pion.changerPosition(deplacement);
 		cases[pion.getPosition() - 1] = (cases[pion.getPosition() - 1] + 1);
