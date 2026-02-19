@@ -53,5 +53,14 @@ public class JournalOnePiece implements IAffichage {
 
 		return avi;
 	}
+	
+	@Override
+	public String initialiserNom() {
+		System.out.println("pour commencer la partie vous devez choisir un nom");
+		Scanner n = new Scanner(System.in) ;
+		String nom = n.nextLine();
+		return nom;
+		
+	}
 
 }

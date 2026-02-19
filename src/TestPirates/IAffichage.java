@@ -5,4 +5,5 @@ public interface IAffichage {
 	 void afficherJoueur(Joueur joueur);
 	 boolean afficheravis();
 	 void afficherposition(String nom, int position);
+	 String initialiserNom();
 }
