@@ -18,22 +18,22 @@ public class Jeu {
 		Joueur joueur2 = new Joueur(nom2, pion1, plateau1);
 		journal.afficherJoueur(joueur2);
 		boolean test2 = true;
-		while (test2 == true) {
+		while (test2) {
 
 			joueur1.deplacerJoueur();
 			boolean victoire1 = joueur1.verifierVictoire();
-			if (victoire1 == true) {
+			if (victoire1) {
 				return;
 			}
 
 			joueur2.deplacerJoueur();
 			boolean victoire2 = joueur2.verifierVictoire();
-			if (victoire2 == true) {
+			if (victoire2) {
 				return;
 			}
 
 			boolean avis = journal.afficheravis();
-			if (avis == true) {
+			if (avis) {
 				test2 = true;
 			} else {
 				test2 = false;

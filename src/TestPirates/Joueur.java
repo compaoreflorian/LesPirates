@@ -35,7 +35,6 @@ public class Joueur {
 
 	public boolean verifierVictoire() {
 		int positionPion = pion.getPosition() ;
-		boolean victoire = journal.afficherVictoire(positionPion);
-		return victoire;
+	    return journal.afficherVictoire(positionPion);
 	}
 }

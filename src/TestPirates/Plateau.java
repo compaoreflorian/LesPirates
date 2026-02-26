@@ -4,6 +4,7 @@ public class Plateau {
 	private int[] cases = new int[30];
 	private Pion pion1;
 	private Pion pion2;
+	
 
 	public Plateau(Pion pion1, Pion pion2) {
 		this.pion1 = pion1;
