@@ -2,9 +2,12 @@ package TestPirates;
 
 public class Jeu {
 	private IAffichage journal;
-	private Pion pion1 = new Pion(Couleur.ROUGE);
-	private Pion pion2 = new Pion(Couleur.BLEU);
-	private Plateau plateau1 = new Plateau(pion1, pion2);
+	
+	
+	private De de = new De();
+	private Plateau plateau1 = new Plateau();
+	private Pion pion1= new Pion(Couleur.BLEU,plateau1);
+	private Pion pion2 = new Pion(Couleur.ROUGE,plateau1);
 
 	public Jeu(IAffichage journal) {
 		this.journal = journal;
@@ -12,10 +15,10 @@ public class Jeu {
 
 	public void lancerJeu() {
 		String nom1 = journal.initialiserNom();
-		Joueur joueur1 = new Joueur(nom1, pion2, plateau1);
+		Joueur joueur1 = new Joueur(nom1, pion1,de);
 		journal.afficherJoueur(joueur1);
 		String nom2 = journal.initialiserNom();
-		Joueur joueur2 = new Joueur(nom2, pion1, plateau1);
+		Joueur joueur2 = new Joueur(nom2, pion2, de);
 		journal.afficherJoueur(joueur2);
 		boolean test2 = true;
 		while (test2) {
