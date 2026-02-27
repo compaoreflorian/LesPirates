@@ -1,13 +1,26 @@
 package TestPirates;
 
 public class Plateau {
-	private static final int taille =30 ;
+	private static final int taille = 30;
+	CaseSpeciale[] caseSpeciales = new CaseSpeciale[5];
+	private int nbCases = 5;
+
 	public Plateau() {
-		CaseSpeciale[] caseSpeciales = new CaseSpeciale[5];
 		for (int i = 1; i < 5; i++) {
-		    caseSpeciales[i] = new PlusOuMoins(5*i);
+			PlusOuMoins casePOM = new PlusOuMoins(5 * i);
+			caseSpeciales[i] = casePOM;
 		}
-	
+
+	}
+
+	public CaseSpeciale[] getCases() {
+		return caseSpeciales;
+	}
+
+	public int getNbCases() {
+		return nbCases;
+	}
+
 	public int getTaille() {
 		return taille;
 	}

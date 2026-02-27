@@ -32,4 +32,8 @@ public class Pion {
 	public String getNom() {
 		return nom;
 	}
+	
+	public Plateau getPlateau() {
+		return plateau;
+	}
 }

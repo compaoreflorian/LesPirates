@@ -23,15 +23,15 @@ public class Joueur {
 	public String getNom() {
 		return nom;
 	}
-	
+
 	public int getNombreDeCoeur() {
 		return nombreDeCoeur;
 	}
-    
-	
+
 	public void setNombreDeCoeur(int nombre) {
-		this.nombreDeCoeur=nombreDeCoeur;
+		this.nombreDeCoeur = nombre;
 	}
+
 	public boolean verifierVictoire() {
 		int positionPion = pion.getPosition();
 		return journal.afficherVictoire(positionPion);

@@ -14,7 +14,6 @@ public class PlusOuMoins extends CaseSpeciale {
 
 	@Override
 	public void appliquerEffet(Joueur joueur) {
-		// TODO document why this method is empty
 		int NombreDeCoeur = joueur.getNombreDeCoeur();
 		int tirage = de.lancer(1);
 		if (tirage < 3) {
@@ -23,5 +22,7 @@ public class PlusOuMoins extends CaseSpeciale {
 			joueur.setNombreDeCoeur(NombreDeCoeur + 1);
 		}
 	}
+
+
 
 }
