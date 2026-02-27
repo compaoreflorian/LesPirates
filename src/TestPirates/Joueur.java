@@ -15,7 +15,7 @@ public class Joueur {
 	}
 
 	public void deplacerJoueur() {
-		int deplacement = de.lancer();
+		int deplacement = de.lancer(2);
 		pion.changerPosition(deplacement);
 		journal.afficherposition(nom, pion.getPosition());
 	}
@@ -23,7 +23,15 @@ public class Joueur {
 	public String getNom() {
 		return nom;
 	}
-
+	
+	public int getNombreDeCoeur() {
+		return nombreDeCoeur;
+	}
+    
+	
+	public void setNombreDeCoeur(int nombre) {
+		this.nombreDeCoeur=nombreDeCoeur;
+	}
 	public boolean verifierVictoire() {
 		int positionPion = pion.getPosition();
 		return journal.afficherVictoire(positionPion);
