@@ -8,7 +8,7 @@ public class Pion {
 
 	public Pion(Couleur couleur, Plateau plateau) {
 		this.couleur = couleur;
-		this.plateau=plateau;
+		this.plateau = plateau;
 		nom = couleur.getCouleur();
 		this.position = 1;
 	}
@@ -32,8 +32,5 @@ public class Pion {
 	public String getNom() {
 		return nom;
 	}
-	
-	public Plateau getPlateau() {
-		return plateau;
-	}
+
 }

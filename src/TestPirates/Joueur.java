@@ -3,7 +3,7 @@ package TestPirates;
 public class Joueur {
 	private IAffichage journal = new JournalOnePiece();
 	private String nom;
-	private int nombreDeCoeur;
+	private int nombreDeCoeur = 5;
 	private Pion pion;
 	private De de;
 
@@ -34,6 +34,12 @@ public class Joueur {
 
 	public boolean verifierVictoire() {
 		int positionPion = pion.getPosition();
-		return journal.afficherVictoire(positionPion);
+		boolean test = (positionPion == 30);
+		if (test) {
+			journal.afficherVictoire();
+		} else {
+			journal.afficherEncouragement(positionPion);
+		}
+		return test;
 	}
 }

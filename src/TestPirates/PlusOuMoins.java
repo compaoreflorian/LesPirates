@@ -2,6 +2,7 @@ package TestPirates;
 
 public class PlusOuMoins extends CaseSpeciale {
 	private int numero;
+	private IAffichage journal = new JournalOnePiece();
 	private De de = new De();
 
 	public PlusOuMoins(int numero) {
@@ -13,16 +14,18 @@ public class PlusOuMoins extends CaseSpeciale {
 	}
 
 	@Override
-	public void appliquerEffet(Joueur joueur) {
-		int NombreDeCoeur = joueur.getNombreDeCoeur();
+	public void appliquerEffet(Joueur joueur, Pion pion) {
+		int nombreDeCoeur = joueur.getNombreDeCoeur();
 		int tirage = de.lancer(1);
 		if (tirage < 3) {
-			joueur.setNombreDeCoeur(NombreDeCoeur - 1);
+			joueur.setNombreDeCoeur(nombreDeCoeur - 1);
+			journal.afficherTirage(tirage);
 		} else {
-			joueur.setNombreDeCoeur(NombreDeCoeur + 1);
+			joueur.setNombreDeCoeur(nombreDeCoeur + 1);
+			journal.afficherTirage(tirage);
 		}
+		journal.afficherPointDeVie(joueur.getNombreDeCoeur());
+
 	}
-
-
 
 }

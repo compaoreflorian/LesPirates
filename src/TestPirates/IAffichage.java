@@ -1,9 +1,29 @@
 package TestPirates;
 
 public interface IAffichage {
-	 boolean afficherVictoire(int position);
-	 void afficherJoueur(Joueur joueur);
-	 boolean afficheravis();
-	 void afficherposition(String nom, int position);
-	 String initialiserNom();
+	void afficherVictoire();
+
+	boolean afficheravis();
+
+	void afficherposition(String nom, int position);
+
+	void initialiserNom(String numero);
+
+	void afficherTirage(int tirage);
+
+	void afficherPointDeVie(int nombreDeCoeur);
+
+	void afficherMenu();
+
+	void afficherEncouragement(int positionPion);
+
+	void afficherBienvenue(String nom);
+
+	void afficherDepart();
+
+	void afficherIntro();
+
+	void afficherTour(String nom);
+
+	void afficherContinuer();
 }
