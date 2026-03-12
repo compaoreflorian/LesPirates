@@ -1,11 +1,13 @@
 package TestPirates;
 
 public interface IAffichage {
+	void afficherPlusOuMoins();
+
 	void afficherVictoire();
 
-	boolean afficheravis();
+	void afficheravis();
 
-	void afficherposition(String nom, int position);
+	void afficherposition(int position);
 
 	void initialiserNom(String numero);
 
@@ -21,9 +23,17 @@ public interface IAffichage {
 
 	void afficherDepart();
 
-	void afficherIntro();
-
-	void afficherTour(String nom);
-
 	void afficherContinuer();
+
+	void afficherRetour(int retour);
+
+	void afficherDeplacement(String nom, int deplacement);
+
+	void regleDuJeu();
+
+	void afficherDecisionQuitter();
+
+	void afficherChoixInvalide();
+
+	void afficherEtesVousPret(String nom);
 }

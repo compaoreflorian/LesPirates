@@ -16,6 +16,7 @@ public class PlusOuMoins extends CaseSpeciale {
 	@Override
 	public void appliquerEffet(Joueur joueur, Pion pion) {
 		int nombreDeCoeur = joueur.getNombreDeCoeur();
+		journal.afficherPlusOuMoins();
 		int tirage = de.lancer(1);
 		if (tirage < 3) {
 			joueur.setNombreDeCoeur(nombreDeCoeur - 1);

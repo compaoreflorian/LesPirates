@@ -3,28 +3,34 @@ package TestPirates;
 public class Pion {
 	private Couleur couleur;
 	private String nom;
-	private int position;
+	private int positionActuelle;
+	private int positionPrecedente;
 	private Plateau plateau;
 
 	public Pion(Couleur couleur, Plateau plateau) {
 		this.couleur = couleur;
 		this.plateau = plateau;
 		nom = couleur.getCouleur();
-		this.position = 1;
+		this.positionActuelle = 1;
+	}
+
+	public int getPositionPrecedente() {
+		return positionPrecedente;
 	}
 
 	public int getPosition() {
-		return position;
+		return positionActuelle;
 
 	}
 
 	public void changerPosition(int deplacement) {
-		if ((position + deplacement) > plateau.getTaille()) {
-			int retour = position + deplacement - plateau.getTaille();
-			position = plateau.getTaille() - retour;
+		positionPrecedente = positionActuelle;
+		if ((positionActuelle + deplacement) > plateau.getTaille()) {
+			int retour = positionActuelle + deplacement - plateau.getTaille();
+			positionActuelle = plateau.getTaille() - retour;
 		} else {
 
-			position = position + deplacement;
+			positionActuelle = positionActuelle + deplacement;
 		}
 
 	}

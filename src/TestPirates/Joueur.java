@@ -16,8 +16,10 @@ public class Joueur {
 
 	public void deplacerJoueur() {
 		int deplacement = de.lancer(2);
+		journal.afficherDeplacement(nom, deplacement);
 		pion.changerPosition(deplacement);
-		journal.afficherposition(nom, pion.getPosition());
+		journal.afficherposition(pion.getPosition());
+
 	}
 
 	public String getNom() {
@@ -30,16 +32,5 @@ public class Joueur {
 
 	public void setNombreDeCoeur(int nombre) {
 		this.nombreDeCoeur = nombre;
-	}
-
-	public boolean verifierVictoire() {
-		int positionPion = pion.getPosition();
-		boolean test = (positionPion == 30);
-		if (test) {
-			journal.afficherVictoire();
-		} else {
-			journal.afficherEncouragement(positionPion);
-		}
-		return test;
 	}
 }
