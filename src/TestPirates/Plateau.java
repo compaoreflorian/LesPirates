@@ -1,35 +1,30 @@
 package TestPirates;
 
 public class Plateau {
-	private int[] cases = new int[30];
-	
-	
-	//a voir numéro de case 
-	
-	CaseSpeciale[5]=plusOuMoins;
-	
-	
-	
-	private Pion pion1;
-	private Pion pion2;
-	
+	private static final int taille = 30;
+	private CaseSpeciale[] caseSpeciales = new CaseSpeciale[6];
+	private int nbCases = 6;
 
-	public Plateau(Pion pion1, Pion pion2) {
-		this.pion1 = pion1;
-		this.pion2 = pion2;
-	}
-
-	public void quitterPosition(Pion pion) {
-		cases[pion.getPosition() - 1] = (cases[pion.getPosition() - 1] - 1);
+	public Plateau() {
+		for (int i = 0; i < 3; i++) {
+			PlusOuMoins casePOM = new PlusOuMoins(5 * (i + 1));
+			AnnuleCase caseA = new AnnuleCase(4 * (i + 2));
+			caseSpeciales[i] = casePOM;
+			caseSpeciales[i + 3] = caseA;
+		}
 
 	}
 
-	public void occuperPosition(Pion pion, int deplacement) {
-		quitterPosition(pion);
-		pion.changerPosition(deplacement);
-		cases[pion.getPosition() - 1] = (cases[pion.getPosition() - 1] + 1);
+	public CaseSpeciale[] getCases() {
+		return caseSpeciales;
 	}
-	
-	
+
+	public int getNbCases() {
+		return nbCases;
+	}
+
+	public int getTaille() {
+		return taille;
+	}
 
 }

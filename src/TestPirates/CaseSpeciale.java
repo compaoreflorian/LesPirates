@@ -1,8 +1,8 @@
 package TestPirates;
 
 public abstract class CaseSpeciale {
-	  private Pion pion;
-      protected void appliquerEffet() {
-      }
-       
+	protected abstract void appliquerEffet(Joueur joueur, Pion pion);
+
+	protected abstract int getNumero();
+
 }
