@@ -38,9 +38,11 @@ public class JournalOnePiece implements IAffichage {
 	@Override
 	public void afficherTirage(int tirage) {
 		if (tirage < 3) {
+			System.out.println("========================================================================");
+			System.out.println("oups vous avez tirez " + tirage +", vous venez de perdre 1 point de vie");
 			System.out.println("oups vous venez de perdre 1 point de vie");
 		} else {
-			System.out.println("hourra vous venez de gagnez un point de vie");
+			System.out.println("hourra vous avez tirez " + tirage +", vous venez de gagnez un point de vie");
 		}
 
 	}
@@ -215,6 +217,20 @@ public class JournalOnePiece implements IAffichage {
 		System.out.println("                  Appuyez sur Entrée pour lancer le dé  ");
 		System.out.println("");
 
+	}
+
+	@Override
+	public void afficherVieMax() {
+		System.out.println("vous avez déja 5 points de vie vous ne pouvez pas en gagnez plus ");
+		System.out.println("=================================================================");
+		
+	}
+
+	@Override
+	public void afficherinversion(int position) {
+		System.out.println("vous etes tombé dans la case inversion vous inverser votre case avec l'autre joueur");
+		System.out.println("votre nouvelle position est: " + position +".");
+		System.out.println("=================================================================================");
 	}
 
 }

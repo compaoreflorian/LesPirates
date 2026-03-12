@@ -14,10 +14,10 @@ public class AnnuleCase extends CaseSpeciale {
 	}
 
 	@Override
-	public void appliquerEffet(Joueur joueur, Pion pion) {
-		int retour = pion.getPositionPrecedente();
-		int difference = pion.getPositionPrecedente() - pion.getPosition();
-		pion.changerPosition(difference);
+	public void appliquerEffet(Joueur joueur, Pion pion1, Pion pion2) {
+		int retour = pion1.getPositionPrecedente();
+		int difference = pion1.getPositionPrecedente() - pion1.getPosition();
+		pion1.changerPosition(difference);
 		journal.afficherRetour(retour);
 	}
 

@@ -11,7 +11,7 @@ public class Pion {
 		this.couleur = couleur;
 		this.plateau = plateau;
 		nom = couleur.getCouleur();
-		this.positionActuelle = 1;
+		this.positionActuelle = 0;
 	}
 
 	public int getPositionPrecedente() {
@@ -33,6 +33,10 @@ public class Pion {
 			positionActuelle = positionActuelle + deplacement;
 		}
 
+	}
+
+	public void teleporter(int numeroDeCase) {
+		positionActuelle = numeroDeCase;
 	}
 
 	public String getNom() {

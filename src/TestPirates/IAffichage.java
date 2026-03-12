@@ -36,4 +36,8 @@ public interface IAffichage {
 	void afficherChoixInvalide();
 
 	void afficherEtesVousPret(String nom);
+
+	void afficherVieMax();
+
+	void afficherinversion(int position2);
 }

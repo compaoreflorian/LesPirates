@@ -33,12 +33,12 @@ public class Jeu {
 		return false;
 	}
 
-	public void verifierEffet(Joueur joueur, Pion pion) {
+	public void verifierEffet(Joueur joueur, Pion pion1, Pion pion2) {
 
 		for (CaseSpeciale c : caseSpeciales) {
 
-			if (c != null && pion.getPosition() == c.getNumero()) {
-				c.appliquerEffet(joueur, pion);
+			if (c != null && pion1.getPosition() == c.getNumero()) {
+				c.appliquerEffet(joueur, pion1, pion2);
 			}
 		}
 	}
@@ -54,12 +54,15 @@ public class Jeu {
 				return true;
 			}
 
-			if (avis.equals("n")) {
+			else if (avis.equals("n")) {
 				journal.afficherDecisionQuitter();
 				return false;
 			}
 
-			journal.afficherChoixInvalide();
+			else {
+				journal.afficherChoixInvalide();
+				recupererAvis();
+			}
 		}
 	}
 
@@ -99,6 +102,7 @@ public class Jeu {
 
 			else {
 				journal.afficherChoixInvalide();
+				recupererAvis();
 			}
 		}
 	}
@@ -113,12 +117,12 @@ public class Jeu {
 			Joueur joueur1 = joueurs[0];
 			Joueur joueur2 = joueurs[1];
 
+			if (joueur1 == null || joueur2 == null) {
+				return;
+			}
+
 			while (!commencer.equals("1") && !commencer.equals("2")) {
 				journal.afficherDepart();
-
-				if (joueur1 == null || joueur2 == null) {
-					return;
-				}
 
 				commencer = recupererAvis();
 
@@ -132,7 +136,8 @@ public class Jeu {
 						recupererAvis();
 
 						joueur1.deplacerJoueur();
-						verifierEffet(joueur1, pion1);
+
+						verifierEffet(joueur1, pion1, pion2);
 
 						if (verifierVictoire(pion1, plateau)) {
 							return;
@@ -142,13 +147,15 @@ public class Jeu {
 						recupererAvis();
 
 						joueur2.deplacerJoueur();
-						verifierEffet(joueur2, pion2);
+						verifierEffet(joueur2, pion2, pion1);
 
 						if (verifierVictoire(pion2, plateau)) {
 							return;
 						}
+						if (!verifierContinuer()) {
+							return;
+						}
 
-						partieEnCours = verifierContinuer();
 					}
 				}
 
