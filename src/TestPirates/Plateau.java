@@ -2,6 +2,14 @@ package TestPirates;
 
 public class Plateau {
 	private int[] cases = new int[30];
+	
+	
+	//a voir numéro de case 
+	
+	CaseSpeciale[5]=plusOuMoins;
+	
+	
+	
 	private Pion pion1;
 	private Pion pion2;
 	
