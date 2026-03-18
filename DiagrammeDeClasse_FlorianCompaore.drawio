@@ -1,150 +1,58 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.6.3">
-  <diagram name="Page-1" id="qESTSs2oN_I1gE3vOuCf">
-    <mxGraphModel dx="703" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="29.6.3">
+  <diagram name="JeuPlusOuMoins" id="diagram-plus-ou-moins">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-14" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color:#ffffff;padding:0px 0px 0px 2px;&quot;&gt;&lt;span style=&quot;font-family: Consolas; font-size: 10pt; white-space: pre;&quot;&gt;&lt;span style=&quot;background-color: rgb(212, 212, 212);&quot;&gt;Joueur&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="268" width="290" x="340" y="60" as="geometry" />
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- CaseSpeciale -->
+        <mxCell id="CaseSpeciale" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d4d4d4;collapsible=1;whiteSpace=wrap;html=1;" value="CaseSpeciale" vertex="1">
+          <mxGeometry height="100" width="250" x="50" y="50" as="geometry"/>
         </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-15" parent="XQ0Fgsh7dujrMwib2leo-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- nom : String" vertex="1">
-          <mxGeometry height="26" width="290" y="26" as="geometry" />
+        
+        <!-- PlusOuMoins -->
+        <mxCell id="PlusOuMoins" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d4d4d4;collapsible=1;whiteSpace=wrap;html=1;" value="PlusOuMoins" vertex="1">
+          <mxGeometry height="220" width="250" x="350" y="50" as="geometry"/>
         </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-16" parent="XQ0Fgsh7dujrMwib2leo-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- pion : Pion" vertex="1">
-          <mxGeometry height="26" width="290" y="52" as="geometry" />
+        
+        <!-- Joueur -->
+        <mxCell id="Joueur" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d4d4d4;collapsible=1;whiteSpace=wrap;html=1;" value="Joueur" vertex="1">
+          <mxGeometry height="200" width="250" x="50" y="300" as="geometry"/>
         </mxCell>
-        <object label="- de : De" tooltip="rrr&#xa;" id="XQ0Fgsh7dujrMwib2leo-17">
-          <mxCell parent="XQ0Fgsh7dujrMwib2leo-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1">
-            <mxGeometry height="26" width="290" y="78" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-22" parent="XQ0Fgsh7dujrMwib2leo-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- nombreDeCoeur : Integer = 5" vertex="1">
-          <mxGeometry height="26" width="290" y="104" as="geometry" />
+        
+        <!-- Pion -->
+        <mxCell id="Pion" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d4d4d4;collapsible=1;whiteSpace=wrap;html=1;" value="Pion" vertex="1">
+          <mxGeometry height="180" width="200" x="350" y="300" as="geometry"/>
         </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-23" parent="XQ0Fgsh7dujrMwib2leo-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- journal : IAffichage = JournalOnePiece" vertex="1">
-          <mxGeometry height="26" width="290" y="130" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-28" parent="XQ0Fgsh7dujrMwib2leo-14" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
-          <mxGeometry height="8" width="290" y="156" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-24" parent="XQ0Fgsh7dujrMwib2leo-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ deplacerJoueur : void" vertex="1">
-          <mxGeometry height="26" width="290" y="164" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-29" parent="XQ0Fgsh7dujrMwib2leo-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getNom : String" vertex="1">
-          <mxGeometry height="26" width="290" y="190" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-31" parent="XQ0Fgsh7dujrMwib2leo-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getNombreDeCoeur : Integer" vertex="1">
-          <mxGeometry height="26" width="290" y="216" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-32" parent="XQ0Fgsh7dujrMwib2leo-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ setNombreDeCoeur : void" vertex="1">
-          <mxGeometry height="26" width="290" y="242" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-33" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color:#ffffff;padding:0px 0px 0px 2px;&quot;&gt;&lt;span style=&quot;color:#000000;background-color:#ffffff;font-family:&amp;quot;Consolas&amp;quot;;font-size:10pt;white-space:pre;&quot;&gt;&lt;span style=&quot;color:#000000;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#000000;background-color:#d4d4d4;&quot;&gt;Pion&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;" vertex="1">
-          <mxGeometry height="294" width="290" x="30" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-34" parent="XQ0Fgsh7dujrMwib2leo-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- couleur : Couleur" vertex="1">
-          <mxGeometry height="26" width="290" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-35" parent="XQ0Fgsh7dujrMwib2leo-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- nom : String" vertex="1">
-          <mxGeometry height="26" width="290" y="52" as="geometry" />
-        </mxCell>
-        <object label="- positionActuelle : Integer&amp;nbsp;" tooltip="rrr&#xa;" id="XQ0Fgsh7dujrMwib2leo-36">
-          <mxCell parent="XQ0Fgsh7dujrMwib2leo-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1">
-            <mxGeometry height="26" width="290" y="78" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-37" parent="XQ0Fgsh7dujrMwib2leo-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- positionPrecedente : Integer" vertex="1">
-          <mxGeometry height="26" width="290" y="104" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-38" parent="XQ0Fgsh7dujrMwib2leo-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- plateau : Plateau" vertex="1">
-          <mxGeometry height="26" width="290" y="130" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-39" parent="XQ0Fgsh7dujrMwib2leo-33" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
-          <mxGeometry height="8" width="290" y="156" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-44" parent="XQ0Fgsh7dujrMwib2leo-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getPositionActuelle: Integer" vertex="1">
-          <mxGeometry height="26" width="290" y="164" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-40" parent="XQ0Fgsh7dujrMwib2leo-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getPositionPrecedente: Integer" vertex="1">
-          <mxGeometry height="26" width="290" y="190" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-41" parent="XQ0Fgsh7dujrMwib2leo-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getNom : String" vertex="1">
-          <mxGeometry height="26" width="290" y="216" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-42" parent="XQ0Fgsh7dujrMwib2leo-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ changerPosition : void" vertex="1">
-          <mxGeometry height="26" width="290" y="242" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-43" parent="XQ0Fgsh7dujrMwib2leo-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ teleporter : void" vertex="1">
-          <mxGeometry height="26" width="290" y="268" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-46" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;font face=&quot;Consolas&quot;&gt;&lt;span style=&quot;font-size: 13.3333px; white-space: pre; background-color: rgb(212, 212, 212);&quot;&gt;Plateau&lt;/span&gt;&lt;/font&gt;" vertex="1">
-          <mxGeometry height="190" width="290" x="360" y="540" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-47" parent="XQ0Fgsh7dujrMwib2leo-46" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- taille : Integer =30" vertex="1">
-          <mxGeometry height="26" width="290" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-48" parent="XQ0Fgsh7dujrMwib2leo-46" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- nbCaseSpeciales :Integer =10" vertex="1">
-          <mxGeometry height="26" width="290" y="52" as="geometry" />
-        </mxCell>
-        <object label="- casesSpeciales : CaseSpeciale[12]" tooltip="rrr&#xa;" id="XQ0Fgsh7dujrMwib2leo-49">
-          <mxCell parent="XQ0Fgsh7dujrMwib2leo-46" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1">
-            <mxGeometry height="26" width="290" y="78" as="geometry" />
-          </mxCell>
-        </object>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-52" parent="XQ0Fgsh7dujrMwib2leo-46" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
-          <mxGeometry height="8" width="290" y="104" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-53" parent="XQ0Fgsh7dujrMwib2leo-46" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getNbCaseSpeciales: Integer" vertex="1">
-          <mxGeometry height="26" width="290" y="112" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-54" parent="XQ0Fgsh7dujrMwib2leo-46" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getTaille: Integer" vertex="1">
-          <mxGeometry height="26" width="290" y="138" as="geometry" />
-        </mxCell>
-        <mxCell id="XQ0Fgsh7dujrMwib2leo-58" parent="XQ0Fgsh7dujrMwib2leo-46" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getCaseSpeciales: CaseSpeciales[]" vertex="1">
-          <mxGeometry height="26" width="290" y="164" as="geometry" />
+        
+        <!-- Plateau -->
+        <mxCell id="Plateau" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d4d4d4;collapsible=1;whiteSpace=wrap;html=1;" value="Plateau" vertex="1">
+          <mxGeometry height="150" width="250" x="650" y="50" as="geometry"/>
         </mxCell>
 
-      <mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="29.6.3">
-  <diagram name="PlusOuMoins" id="plus-ou-moins-1">
-    <mxGraphModel dx="703" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <!-- Classe PlusOuMoins -->
-        <mxCell id="PlusOuMoins" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color:#d4d4d4;padding:0px 0px 0px 2px;&quot;&gt;PlusOuMoins&lt;/span&gt;" vertex="1">
-          <mxGeometry height="200" width="300" x="100" y="100" as="geometry" />
+        <!-- Héritage: PlusOuMoins -> CaseSpeciale -->
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="PlusOuMoins" target="CaseSpeciale">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- Attributs -->
-        <mxCell id="attr1" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="- numero : int" vertex="1">
-          <mxGeometry height="26" width="300" y="26" as="geometry" />
+        <!-- Association: Joueur utilise PlusOuMoins -->
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="Joueur" target="PlusOuMoins">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <mxCell id="attr2" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="- journal : IAffichage = JournalOnePiece" vertex="1">
-          <mxGeometry height="26" width="300" y="52" as="geometry" />
+        <!-- Association: PlusOuMoins utilise Pion -->
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="PlusOuMoins" target="Pion">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <mxCell id="attr3" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="- de : De = new De()" vertex="1">
-          <mxGeometry height="26" width="300" y="78" as="geometry" />
+        <!-- Association: Plateau contient CaseSpeciale -->
+        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="Plateau" target="CaseSpeciale">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- Ligne de séparation -->
-        <mxCell id="separator" parent="PlusOuMoins" style="line;strokeWidth=1;fillColor=none;" vertex="1">
-          <mxGeometry height="1" width="300" y="104" as="geometry" />
-        </mxCell>
-
-        <!-- Constructeur -->
-        <mxCell id="constructor" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="+ PlusOuMoins(numero : int)" vertex="1">
-          <mxGeometry height="26" width="300" y="112" as="geometry" />
-        </mxCell>
-
-        <!-- Méthodes -->
-        <mxCell id="method1" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="+ getNumero() : int" vertex="1">
-          <mxGeometry height="26" width="300" y="138" as="geometry" />
-        </mxCell>
-
-        <mxCell id="method2" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="+ appliquerEffet(joueur : Joueur, pion1 : Pion, pion2 : Pion) : void" vertex="1">
-          <mxGeometry height="26" width="300" y="164" as="geometry" />
+        <!-- Association: Joueur possède Pion -->
+        <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="Joueur" target="Pion">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
       </root>
