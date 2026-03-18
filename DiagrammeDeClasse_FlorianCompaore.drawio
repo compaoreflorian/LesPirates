@@ -103,6 +103,50 @@
         <mxCell id="XQ0Fgsh7dujrMwib2leo-58" parent="XQ0Fgsh7dujrMwib2leo-46" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getCaseSpeciales: CaseSpeciales[]" vertex="1">
           <mxGeometry height="26" width="290" y="164" as="geometry" />
         </mxCell>
+
+      <mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="29.6.3">
+  <diagram name="PlusOuMoins" id="plus-ou-moins-1">
+    <mxGraphModel dx="703" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Classe PlusOuMoins -->
+        <mxCell id="PlusOuMoins" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color:#d4d4d4;padding:0px 0px 0px 2px;&quot;&gt;PlusOuMoins&lt;/span&gt;" vertex="1">
+          <mxGeometry height="200" width="300" x="100" y="100" as="geometry" />
+        </mxCell>
+
+        <!-- Attributs -->
+        <mxCell id="attr1" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="- numero : int" vertex="1">
+          <mxGeometry height="26" width="300" y="26" as="geometry" />
+        </mxCell>
+
+        <mxCell id="attr2" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="- journal : IAffichage = JournalOnePiece" vertex="1">
+          <mxGeometry height="26" width="300" y="52" as="geometry" />
+        </mxCell>
+
+        <mxCell id="attr3" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="- de : De = new De()" vertex="1">
+          <mxGeometry height="26" width="300" y="78" as="geometry" />
+        </mxCell>
+
+        <!-- Ligne de séparation -->
+        <mxCell id="separator" parent="PlusOuMoins" style="line;strokeWidth=1;fillColor=none;" vertex="1">
+          <mxGeometry height="1" width="300" y="104" as="geometry" />
+        </mxCell>
+
+        <!-- Constructeur -->
+        <mxCell id="constructor" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="+ PlusOuMoins(numero : int)" vertex="1">
+          <mxGeometry height="26" width="300" y="112" as="geometry" />
+        </mxCell>
+
+        <!-- Méthodes -->
+        <mxCell id="method1" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="+ getNumero() : int" vertex="1">
+          <mxGeometry height="26" width="300" y="138" as="geometry" />
+        </mxCell>
+
+        <mxCell id="method2" parent="PlusOuMoins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" value="+ appliquerEffet(joueur : Joueur, pion1 : Pion, pion2 : Pion) : void" vertex="1">
+          <mxGeometry height="26" width="300" y="164" as="geometry" />
+        </mxCell>
+
       </root>
     </mxGraphModel>
   </diagram>
