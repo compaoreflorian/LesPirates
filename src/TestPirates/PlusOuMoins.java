@@ -14,24 +14,24 @@ public class PlusOuMoins extends CaseSpeciale {
 	}
 
 	@Override
-	public void appliquerEffet(Joueur joueur, Pion pion1, Pion pion2) {
-		int nombreDeCoeur = joueur.getNombreDeCoeur();
+	public void appliquerEffet(Joueur joueur1,Joueur joueur2 ) {
+		int nombreDeCoeur = joueur1.getNombreDeCoeur();
 		journal.afficherPlusOuMoins();
 		int tirage = de.lancer(1);
 		if (tirage < 3) {
-			joueur.setNombreDeCoeur(nombreDeCoeur - 1);
+			joueur1.setNombreDeCoeur(nombreDeCoeur - 1);
 			journal.afficherTirage(tirage);
 		} else {
-			int vie = joueur.getNombreDeCoeur();
+			int vie = joueur1.getNombreDeCoeur();
 			if(vie<5) {
-			joueur.setNombreDeCoeur(nombreDeCoeur + 1);
+			joueur1.setNombreDeCoeur(nombreDeCoeur + 1);
 			journal.afficherTirage(tirage);
 		}
 			else {
 				journal.afficherVieMax();
 			}
 		}
-		journal.afficherPointDeVie(joueur.getNombreDeCoeur());
+		journal.afficherPointDeVie(joueur1.getNombreDeCoeur());
 
 	}
 

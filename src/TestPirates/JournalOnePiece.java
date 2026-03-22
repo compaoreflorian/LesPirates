@@ -3,6 +3,7 @@ package TestPirates;
 import java.util.Scanner;
 
 public class JournalOnePiece implements IAffichage {
+	private Scanner scanner = new Scanner(System.in);
 
 	@Override
 	public void afficherposition(int position) {
@@ -11,14 +12,14 @@ public class JournalOnePiece implements IAffichage {
 	}
 
 	@Override
-	public void afficherVictoire() {
-		System.out.println("Felicitations tu viens de trouvé le one piece tu as gagné ");
+	public void afficherVictoire(String nom) {
+		System.out.println("Felicitations " + nom + " tu viens de trouvé le one piece tu as gagné ");
 		System.out.println("===========================================================");
 
 	}
 
 	@Override
-	public void afficheravis() {
+	public void afficherAvis() {
 		System.out.println("===========================================================");
 		System.out.println("             vouler vous continuer y/n");
 		System.out.println("===========================================================");
@@ -39,10 +40,10 @@ public class JournalOnePiece implements IAffichage {
 	public void afficherTirage(int tirage) {
 		if (tirage < 3) {
 			System.out.println("========================================================================");
-			System.out.println("oups vous avez tirez " + tirage +", vous venez de perdre 1 point de vie");
+			System.out.println("oups vous avez tirez " + tirage + ", vous venez de perdre 1 point de vie");
 			System.out.println("oups vous venez de perdre 1 point de vie");
 		} else {
-			System.out.println("hourra vous avez tirez " + tirage +", vous venez de gagnez un point de vie");
+			System.out.println("hourra vous avez tirez " + tirage + ", vous venez de gagnez un point de vie");
 		}
 
 	}
@@ -223,14 +224,34 @@ public class JournalOnePiece implements IAffichage {
 	public void afficherVieMax() {
 		System.out.println("vous avez déja 5 points de vie vous ne pouvez pas en gagnez plus ");
 		System.out.println("=================================================================");
-		
+
 	}
 
 	@Override
-	public void afficherinversion(int position) {
-		System.out.println("vous etes tombé dans la case inversion vous inverser votre case avec l'autre joueur");
-		System.out.println("votre nouvelle position est: " + position +".");
+	public void afficherinversion(String nom, int position) {
+		System.out.println("vous etes tombé dans la case inversion vous inverser votre case avec " + nom);
+		System.out.println("votre nouvelle position est: " + position + ".");
 		System.out.println("=================================================================================");
 	}
 
+	@Override
+	public void afficherRetournerAuMenu() {
+		System.out.println("=================================================================================");
+		System.out.println("vous avez decidez de ne pas commencé appuyer sur entrez pour retounez au menu pricipal");
+
+	}
+
+	@Override
+	public String recupererAvis() {
+		return scanner.nextLine();
+	}
+
+	@Override
+	public void afficherMort(String nom) {
+		System.out.println(
+				"==================================================================================================");
+		System.out.println(
+				"Capitaine " + nom + " vous n'avez malheureusement plus de point de vie vous venez donc de mourir");
+
+	}
 }

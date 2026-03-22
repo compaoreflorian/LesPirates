@@ -1,7 +1,5 @@
 package TestPirates;
 
-import java.util.Scanner;
-
 public class Jeu {
 
 	private IAffichage journal;
@@ -10,22 +8,23 @@ public class Jeu {
 	private CaseSpeciale[] caseSpeciales = plateau.getCases();
 	private Pion pion1 = new Pion(Couleur.BLEU, plateau);
 	private Pion pion2 = new Pion(Couleur.ROUGE, plateau);
-	private Scanner scanner = new Scanner(System.in);
 
 	public Jeu(IAffichage journal) {
 		this.journal = journal;
 	}
 
-	public String recupererAvis() {
-		return scanner.nextLine();
-	}
-
-	public boolean verifierVictoire(Pion pion, Plateau plateauActuel) {
-
+	public boolean verifierVictoire(Joueur joueur1, Joueur joueur2, Plateau plateauActuel) {
+		Pion pion = joueur1.getPion();
 		int positionPion = pion.getPosition();
 
 		if (positionPion == plateauActuel.getTaille()) {
-			journal.afficherVictoire();
+			journal.afficherVictoire(joueur1.getNom());
+			return true;
+		}
+
+		if (joueur1.getNombreDeCoeur() == 0) {
+			journal.afficherMort(joueur1.getNom());
+			journal.afficherVictoire(joueur2.getNom());
 			return true;
 		}
 
@@ -33,22 +32,21 @@ public class Jeu {
 		return false;
 	}
 
-	public void verifierEffet(Joueur joueur, Pion pion1, Pion pion2) {
+	public void verifierEffet(Joueur joueur1, Joueur joueur2) {
+		Pion pion = joueur1.getPion();
 
 		for (CaseSpeciale c : caseSpeciales) {
-
-			if (c != null && pion1.getPosition() == c.getNumero()) {
-				c.appliquerEffet(joueur, pion1, pion2);
+			if (c != null && pion.getPosition() == c.getNumero()) {
+				c.appliquerEffet(joueur1, joueur2);
 			}
 		}
 	}
 
 	public boolean verifierContinuer() {
-
 		while (true) {
 
-			journal.afficheravis();
-			String avis = recupererAvis();
+			journal.afficherAvis();
+			String avis = journal.recupererAvis();
 
 			if (avis.equals("y")) {
 				return true;
@@ -61,38 +59,27 @@ public class Jeu {
 
 			else {
 				journal.afficherChoixInvalide();
-				recupererAvis();
+				journal.recupererAvis();
 			}
 		}
 	}
 
 	public Joueur[] initialiserJeu() {
-
 		Joueur[] joueurs = new Joueur[2];
 
 		while (true) {
 
 			journal.afficherMenu();
-			String choix = recupererAvis();
+			String choix = journal.recupererAvis();
 
 			if (choix.equals("1")) {
-
-				journal.initialiserNom("1");
-				String nom1 = recupererAvis();
-				journal.afficherBienvenue(nom1);
-				joueurs[0] = new Joueur(nom1, pion1, de);
-
-				journal.initialiserNom("2");
-				String nom2 = recupererAvis();
-				journal.afficherBienvenue(nom2);
-				joueurs[1] = new Joueur(nom2, pion2, de);
-
+				initialiserJoueurs(joueurs);
 				return joueurs;
 			}
 
 			if (choix.equals("2")) {
 				journal.regleDuJeu();
-				recupererAvis();
+				journal.recupererAvis();
 			}
 
 			else if (choix.equals("3")) {
@@ -102,16 +89,26 @@ public class Jeu {
 
 			else {
 				journal.afficherChoixInvalide();
-				recupererAvis();
+				journal.recupererAvis();
 			}
 		}
 	}
 
-	public void lancerJeu() {
+	private void initialiserJoueurs(Joueur[] joueurs) {
+		journal.initialiserNom("1");
+		String nom1 = journal.recupererAvis();
+		journal.afficherBienvenue(nom1);
+		joueurs[0] = new Joueur(nom1, pion1, de);
 
+		journal.initialiserNom("2");
+		String nom2 = journal.recupererAvis();
+		journal.afficherBienvenue(nom2);
+		joueurs[1] = new Joueur(nom2, pion2, de);
+	}
+
+	public void lancerJeu() {
 		while (true) {
 
-			String commencer = "";
 			Joueur[] joueurs = initialiserJeu();
 
 			Joueur joueur1 = joueurs[0];
@@ -121,54 +118,70 @@ public class Jeu {
 				return;
 			}
 
-			while (!commencer.equals("1") && !commencer.equals("2")) {
-				journal.afficherDepart();
-
-				commencer = recupererAvis();
-
-				if (commencer.equals("1")) {
-
-					boolean partieEnCours = true;
-
-					while (partieEnCours) {
-
-						journal.afficherEtesVousPret(joueur1.getNom());
-						recupererAvis();
-
-						joueur1.deplacerJoueur();
-
-						verifierEffet(joueur1, pion1, pion2);
-
-						if (verifierVictoire(pion1, plateau)) {
-							return;
-						}
-
-						journal.afficherEtesVousPret(joueur2.getNom());
-						recupererAvis();
-
-						joueur2.deplacerJoueur();
-						verifierEffet(joueur2, pion2, pion1);
-
-						if (verifierVictoire(pion2, plateau)) {
-							return;
-						}
-						if (!verifierContinuer()) {
-							return;
-						}
-
-					}
-				}
-
-				else if (commencer.equals("2")) {
-					journal.afficherDecisionQuitter();
-					break;
-				}
-
-				else {
-					journal.afficherChoixInvalide();
-					recupererAvis();
-				}
+			if (gererChoixDepart(joueur1, joueur2)) {
+				return;
 			}
 		}
 	}
+
+	private boolean gererChoixDepart(Joueur joueur1, Joueur joueur2) {
+		String commencer = "";
+
+		while (!commencer.equals("1") && !commencer.equals("2")) {
+			journal.afficherDepart();
+
+			commencer = journal.recupererAvis();
+
+			if (commencer.equals("1")) {
+				jouerPartie(joueur1, joueur2);
+				return true;
+			}
+
+			else if (commencer.equals("2")) {
+				journal.afficherRetournerAuMenu();
+				journal.recupererAvis();
+				return false;
+			}
+
+			else {
+				journal.afficherChoixInvalide();
+				journal.recupererAvis();
+			}
+		}
+
+		return false;
+	}
+
+	private void jouerPartie(Joueur joueur1, Joueur joueur2) {
+		while (true) {
+
+			if (jouerTour(joueur1, joueur2)) {
+				return;
+			}
+
+			if (jouerTour(joueur2, joueur1)) {
+				return;
+			}
+
+			if (!verifierContinuer()) {
+				return;
+			}
+		}
+	}
+
+	private boolean jouerTour(Joueur joueurCourant, Joueur autreJoueur) {
+		journal.afficherEtesVousPret(joueurCourant.getNom());
+		journal.recupererAvis();
+
+		joueurCourant.deplacerJoueur();
+
+		verifierEffet(joueurCourant, autreJoueur);
+
+		if (verifierVictoire(joueurCourant, autreJoueur, plateau)) {
+			return true;
+		}
+
+		return false;
+	}
+
 }

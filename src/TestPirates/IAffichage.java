@@ -3,9 +3,9 @@ package TestPirates;
 public interface IAffichage {
 	void afficherPlusOuMoins();
 
-	void afficherVictoire();
+	void afficherVictoire(String nom);
 
-	void afficheravis();
+	void afficherAvis();
 
 	void afficherposition(int position);
 
@@ -39,5 +39,13 @@ public interface IAffichage {
 
 	void afficherVieMax();
 
-	void afficherinversion(int position2);
+	void afficherinversion(String nom2, int position2);
+
+	void afficherRetournerAuMenu();
+
+	String recupererAvis();
+
+	void afficherMort(String nom);
+
+
 }

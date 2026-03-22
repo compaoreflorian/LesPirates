@@ -22,6 +22,10 @@ public class Joueur {
 
 	}
 
+	public Pion getPion() {
+		return pion;
+	}
+
 	public String getNom() {
 		return nom;
 	}

@@ -6,8 +6,8 @@ public class De {
 	private int valeur;
 	private Random random = new Random();
 
-	public int lancer(int nombre) {
-		valeur = random.nextInt(1 * nombre, 6 * nombre);
+	public int lancer(int nombreDeDe) {
+		valeur = random.nextInt(1 * nombreDeDe, 6 * nombreDeDe);
 		return valeur;
 	}
 

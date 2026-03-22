@@ -3,7 +3,6 @@ package TestPirates;
 public class AnnuleCase extends CaseSpeciale {
 	private int numero;
 	private IAffichage journal = new JournalOnePiece();
-	private De de = new De();
 
 	public AnnuleCase(int numero) {
 		this.numero = numero;
@@ -14,7 +13,8 @@ public class AnnuleCase extends CaseSpeciale {
 	}
 
 	@Override
-	public void appliquerEffet(Joueur joueur, Pion pion1, Pion pion2) {
+	public void appliquerEffet(Joueur joueur1, Joueur joueur2) {
+		Pion pion1 = joueur1.getPion();
 		int retour = pion1.getPositionPrecedente();
 		int difference = pion1.getPositionPrecedente() - pion1.getPosition();
 		pion1.changerPosition(difference);
