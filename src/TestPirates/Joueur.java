@@ -18,7 +18,7 @@ public class Joueur {
 		int deplacement = de.lancer(2);
 		journal.afficherDeplacement(nom, deplacement);
 		pion.changerPosition(deplacement);
-		journal.afficherposition(pion.getPosition());
+		journal.afficherposition(pion.getPositionActuelle());
 
 	}
 

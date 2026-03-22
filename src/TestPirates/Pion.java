@@ -1,14 +1,12 @@
 package TestPirates;
 
 public class Pion {
-	private Couleur couleur;
 	private String nom;
 	private int positionActuelle;
 	private int positionPrecedente;
 	private Plateau plateau;
 
 	public Pion(Couleur couleur, Plateau plateau) {
-		this.couleur = couleur;
 		this.plateau = plateau;
 		nom = couleur.getCouleur();
 		this.positionActuelle = 0;
@@ -18,7 +16,7 @@ public class Pion {
 		return positionPrecedente;
 	}
 
-	public int getPosition() {
+	public int getPositionActuelle() {
 		return positionActuelle;
 
 	}

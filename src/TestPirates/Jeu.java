@@ -15,7 +15,7 @@ public class Jeu {
 
 	public boolean verifierVictoire(Joueur joueur1, Joueur joueur2, Plateau plateauActuel) {
 		Pion pion = joueur1.getPion();
-		int positionPion = pion.getPosition();
+		int positionPion = pion.getPositionActuelle();
 
 		if (positionPion == plateauActuel.getTaille()) {
 			journal.afficherVictoire(joueur1.getNom());
@@ -36,7 +36,7 @@ public class Jeu {
 		Pion pion = joueur1.getPion();
 
 		for (CaseSpeciale c : caseSpeciales) {
-			if (c != null && pion.getPosition() == c.getNumero()) {
+			if (c != null && pion.getPositionActuelle() == c.getNumero()) {
 				c.appliquerEffet(joueur1, joueur2);
 			}
 		}
