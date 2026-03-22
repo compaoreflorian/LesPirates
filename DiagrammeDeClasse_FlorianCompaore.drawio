@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.6.3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.4">
   <diagram name="Page-1" id="p1zBf62Ed8DumHIKG71w">
-    <mxGraphModel dx="2035" dy="1997" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1966" dy="2020" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -194,7 +194,7 @@
         <mxCell id="jNjqZnioj-10N3BlyPcp-70" parent="jNjqZnioj-10N3BlyPcp-69" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- taille : Integer =30" vertex="1">
           <mxGeometry height="26" width="290" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="jNjqZnioj-10N3BlyPcp-71" parent="jNjqZnioj-10N3BlyPcp-69" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- nbCaseSpeciales :Integer =10" vertex="1">
+        <mxCell id="jNjqZnioj-10N3BlyPcp-71" parent="jNjqZnioj-10N3BlyPcp-69" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- nbCaseSpeciales :Integer =12" vertex="1">
           <mxGeometry height="26" width="290" y="52" as="geometry" />
         </mxCell>
         <object label="- casesSpeciales : CaseSpeciale[12]" tooltip="rrr&#xa;" id="jNjqZnioj-10N3BlyPcp-72">
@@ -281,7 +281,7 @@
           <mxGeometry height="26" width="330" y="528" as="geometry" />
         </mxCell>
         <mxCell id="jNjqZnioj-10N3BlyPcp-106" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;font face=&quot;Consolas&quot;&gt;&lt;span style=&quot;font-size: 13.3333px; white-space: pre; background-color: rgb(212, 212, 212);&quot;&gt;Jeu&lt;/span&gt;&lt;/font&gt;" vertex="1">
-          <mxGeometry height="164" width="410" x="620" y="-550" as="geometry" />
+          <mxGeometry height="164" width="410" x="670" y="-666" as="geometry" />
         </mxCell>
         <mxCell id="jNjqZnioj-10N3BlyPcp-111" parent="jNjqZnioj-10N3BlyPcp-106" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
           <mxGeometry height="8" width="410" y="26" as="geometry" />
