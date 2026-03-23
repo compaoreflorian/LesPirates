@@ -1,4 +1,4 @@
-package TestPirates;
+package test_pirates;
 
 public abstract class CaseSpeciale {
 	protected IAffichage journal = new JournalOnePiece();

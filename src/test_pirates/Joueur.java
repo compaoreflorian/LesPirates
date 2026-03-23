@@ -1,4 +1,4 @@
-package TestPirates;
+package test_pirates;
 
 public class Joueur {
 	private IAffichage journal = new JournalOnePiece();

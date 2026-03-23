@@ -1,4 +1,4 @@
-package TestPirates;
+package test_pirates;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package TestPirates;
+package test_pirates;
 
 public class Plateau {
 	private static final int taille = 30;

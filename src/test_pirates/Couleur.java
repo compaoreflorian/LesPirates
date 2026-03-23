@@ -1,4 +1,4 @@
-package TestPirates;
+package test_pirates;
 
 public enum Couleur {
 	BLEU("Bill Jambe de Bois"), ROUGE("Jack Le Borne ");

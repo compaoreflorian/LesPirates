@@ -1,4 +1,4 @@
-package TestPirates;
+package test_pirates;
 
 public class PlusOuMoins extends CaseSpeciale {
 	private int numero;
